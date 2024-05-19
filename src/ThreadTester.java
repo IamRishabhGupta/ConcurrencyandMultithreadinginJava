@@ -8,7 +8,8 @@ public class ThreadTester {
         Thread thread1=new Thread1("Thread1");
         // thread1.setDaemon(true);
         thread1.start();
-        Thread thread2=new Thread(new Thread2(),"Thread2");
+        Thread2 thread2temp=new Thread2();
+        Thread thread2=new Thread(thread2temp,"Thread2");
         thread2.start();
 
         System.out.println("Main is exiting");
@@ -17,4 +18,10 @@ public class ThreadTester {
         // case of daemon thread it will stop as soon as main thread stops executing as we saw in previous commit
 
     }
+
+
+
+    //basically we impliemnted runnable interface in thread 2 and overrided run method in it
+    //now the thread class have a construcotr which takes runnable object as argument where we passed 
+    //thread2 because it implements runnable interface
 }
