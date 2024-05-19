@@ -15,7 +15,7 @@ public class Thread1 extends Thread
         int n=10;
         for(int i=0;i<n;i++)
         {
-            System.out.println("inside "+Thread.currentThread().getName()+ "  "+i);
+            System.out.println("inside "+Thread.currentThread()+ "  "+i);
         }
     }
 }

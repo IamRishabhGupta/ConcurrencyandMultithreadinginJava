@@ -6,8 +6,11 @@ public class ThreadTester {
     {
         System.out.println("Main is starting");
         Thread thread1=new Thread1("Thread1");
-        thread1.setDaemon(true);
+        // thread1.setDaemon(true);
         thread1.start();
+        Thread thread2=new Thread(new Thread2(),"Thread2");
+        thread2.start();
+
         System.out.println("Main is exiting");
 
         // here we can see since thread1 is a user thread it is still running after execution of main thread but in 
