@@ -20,10 +20,11 @@ public class Stack {
     {
         return stacktop>=array.length-1;
     }
-    public boolean push(int value)
+    public  synchronized boolean push(int value)
     {
-
-        synchronized(lock)
+            ///here this is used as a lock
+            //this instance of the current object is being used as a lock
+        // synchronized(lock)
         {
             if(isFull())
         {
@@ -43,11 +44,12 @@ public class Stack {
         
     }
 
-    public int pop()
+    public synchronized int pop()
     {   
 
 
-        synchronized(lock){
+        // synchronized(lock)
+        {
         if(isEmpty())
         {
             return Integer.MIN_VALUE;
