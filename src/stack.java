@@ -25,6 +25,8 @@ public class Stack {
             ///here this is used as a lock
             //this instance of the current object is being used as a lock
         // synchronized(lock)
+
+        //in case of a static class just use classname.class as lock as there is no instance of static class
         {
             if(isFull())
         {
