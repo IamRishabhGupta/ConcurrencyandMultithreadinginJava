@@ -1,10 +1,10 @@
-public class stack {
+public class Stack {
     
 
 
     private int[] array;
     private int stacktop;
-    public stack(int capacity)
+    public Stack(int capacity)
     {
         array=new int[capacity];
         stacktop=-1;
