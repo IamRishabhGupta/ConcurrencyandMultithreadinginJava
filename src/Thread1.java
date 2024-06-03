@@ -18,4 +18,4 @@ public class Thread1 extends Thread
             System.out.println("inside "+Thread.currentThread()+ "  "+i);
         }
     }
-}
+} 
